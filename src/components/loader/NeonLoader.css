@@ -1,0 +1,44 @@
+.neon-loader-grid {
+ 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  position: relative;
+}
+
+.neon-block {
+  width: 100%;
+  height: 100%;
+  background-color: #0ff;
+  box-shadow: 0 0 10px rgb(4, 145, 145), 0 0 20px #0ff, 0 0 40px #0ff;
+  border-radius: 8px;
+  position: absolute;
+  animation: moveBlock 1.5s infinite ease-in-out;
+}
+
+/* Animation Positions */
+.pos-1 {
+  animation-delay: 0s;
+}
+.pos-2 {
+  animation-delay: 0.5s;
+}
+.pos-3 {
+  animation-delay: 1s;
+}
+
+@keyframes moveBlock {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  33% {
+    transform: translate(110%, 0%);
+  }
+  66% {
+    transform: translate(110%, 110%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
